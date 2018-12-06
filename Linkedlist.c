@@ -43,19 +43,25 @@ void addTail(int value) {
 	
 }
 
-void genList(void) {
+void genList() {
 	list = create_node(0);
 	
 	return;
 }
 
-void print_list(void) {
+void print_list(int n) {
 	linknd_t* ndPtr;
+	int i=0;
 
 	ndPtr = (linknd_t*)list->next;
 	
 	while(ndPtr != NULL) {
-		printf("%i\n", ndPtr->data);
+		i++;
+		
+		if(i==n) {
+			printf("%i-th value : %i\n", i, ndPtr->data);
+			break;
+		}
 		ndPtr = ndPtr->next;	
 	}
 }
