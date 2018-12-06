@@ -48,3 +48,14 @@ void genList(void) {
 	
 	return;
 }
+
+void print_list(void) {
+	linknd_t* ndPtr;
+
+	ndPtr = list->next;
+	
+	while(ndPtr != NULL) {
+		printf("%i", ndPtr->data);
+		ndPtr = ndPtr->next;	
+	}
+}
