@@ -42,3 +42,9 @@ void addTail(int value) {
 	}
 	
 }
+
+void genList(void) {
+	list = create_node(0);
+	
+	return;
+}
