@@ -52,10 +52,10 @@ void genList(void) {
 void print_list(void) {
 	linknd_t* ndPtr;
 
-	ndPtr = list->next;
+	ndPtr = (linknd_t*)list->next;
 	
 	while(ndPtr != NULL) {
-		printf("%i", ndPtr->data);
+		printf("%i\n", ndPtr->data);
 		ndPtr = ndPtr->next;	
 	}
 }
